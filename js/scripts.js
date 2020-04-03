@@ -3,13 +3,11 @@ var beep = "beep";
 var boop = "boop";
 var neighb = "Won't you be my neighbor?";
 
-var messageConvert = function(string){
+var messageConvert = function(int){
   var outputArray = [];
   var indexString = "";
-  for(i = 0; i <= string.length; i++){
+  for(i = 0; i <= int; i++){
     indexString = i.toString();
-    alert(typeof indexString);
-    alert(i);
     if (indexString.indexOf(3) > -1){
       outputArray.push(neighb);
     }
@@ -28,7 +26,7 @@ var messageConvert = function(string){
 $(document).ready(function(){
   $("#formOne").submit(function(){
     event.preventDefault();
-    var input = $("#user-input").val();
+    var input = parseInt($("#user-input").val());
     alert(typeof input);
 
     $("#output").text(messageConvert(input));
