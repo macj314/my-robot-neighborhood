@@ -1,7 +1,7 @@
 //Business Logic
 var beep = "beep";
 var boop = "boop";
-var neighb = "Won't you be my neighbor?";
+var neighbor = "Won't you be my neighbor?";
 
 var messageConvert = function(int){
   var outputArray = [];
@@ -9,7 +9,7 @@ var messageConvert = function(int){
   for(i = 0; i <= int; i++){
     indexString = i.toString();
     if (indexString.indexOf(3) > -1){
-      outputArray.push(neighb);
+      outputArray.push(neighbor);
     }
     else if (indexString.indexOf(2) > -1){
       outputArray.push(boop);
@@ -27,8 +27,6 @@ $(document).ready(function(){
   $("#formOne").submit(function(){
     event.preventDefault();
     var input = parseInt($("#user-input").val());
-    alert(typeof input);
-
     $("#output").text(messageConvert(input));
   })
 })

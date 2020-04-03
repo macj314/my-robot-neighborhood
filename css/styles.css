@@ -1,0 +1,14 @@
+.container{
+  text-align: center;
+}
+
+body{
+  background-color: #0052cc;
+}
+
+#formOne{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: #ffad33;
+}
