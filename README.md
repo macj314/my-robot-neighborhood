@@ -5,7 +5,8 @@
 
 ## Description
 
-_This site takes a number from the user, and prints out a message that is dependent on that input._
+_This site takes a number from the user prints out a list of numbers from 0 to input number. If one of the printed numbers has;
+1, 2, or 3 in it then, print out a specific string for each one._
 
 ## Specs
 
@@ -13,14 +14,14 @@ _This site takes a number from the user, and prints out a message that is depend
   ** Input: "4"
   ** Output: "0, 1, 2, 3, 4"
 * Numbers that contain 1 -> print out "beep"
-  ** Input: "15, 5"
-  ** Output: "beep, 5"
+  ** Input: "1"
+  ** Output: "0, beep"
 * Numbers that contain 2 -> print out "boop"
-  ** Input: "25, 7"
-  ** Output:"boop, 7"  
+  ** Input: "3"
+  ** Output:"0, beep, boop, 3"  
 * Numbers that contain 3 -> print out "Won't you be my neighbor?"
-  ** Input: "538, 12"
-  ** Output: "Won't you be my neighbor?, beep"
+  ** Input: "13"
+  ** Output: "0... 9, beep, beep, boop, Won't you be my neighbor?"
 
 ## Setup/Installation Requirements
 
