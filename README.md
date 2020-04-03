@@ -15,13 +15,16 @@ _This site takes a number from the user prints out a list of numbers from 0 to i
   ** Output: "0, 1, 2, 3, 4"
 * Numbers that contain 1 -> print out "beep"
   ** Input: "1"
-  ** Output: "0, beep"
+  ** Output: "0, 'beep'"
 * Numbers that contain 2 -> print out "boop"
   ** Input: "3"
-  ** Output:"0, beep, boop, 3"  
+  ** Output:"0, 'beep', 'boop', 3"  
 * Numbers that contain 3 -> print out "Won't you be my neighbor?"
   ** Input: "13"
-  ** Output: "0... 9, beep, beep, boop, Won't you be my neighbor?"
+  ** Output: "0... 9, 'beep', 'beep', 'boop', 'Won't you be my neighbor?'"
+* Display two buttons. One will display the above in regular order. The second will display it in reverse order.
+  ** Input "3"
+  ** Output: "'Won't you be my neighbor?', 'boop', 'beep', 0"
 
 ## Setup/Installation Requirements
 
