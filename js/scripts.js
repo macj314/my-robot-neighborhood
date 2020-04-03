@@ -1,4 +1,3 @@
-//Business Logic
 var beep = "beep";
 var boop = "boop";
 var neighbor = "Won't you be my neighbor?";
@@ -42,18 +41,16 @@ var messageReverse = function(int){
 }
 
 $(document).ready(function(){
+  var input = parseInt($("#user-input").val()); 
   $("#button-one").click(function(){   
       event.preventDefault();    
-      var input = parseInt($("#user-input").val());  
+ 
       $("#output").text(messageConvert(input));
       $("#form-one").submit()
   })
   $("#button-two").click(function(){
     event.preventDefault();    
-    var input = parseInt($("#user-input").val());  
     $("#output").text(messageReverse(input));
     $("#form-one").submit()
   })
-
-
 })
