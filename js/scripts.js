@@ -2,15 +2,12 @@ var beep = "beep";
 var boop = "boop";
 var neighbor = "Won't you be my neighbor?";
 
-var messageConvert = function(int, string){
+var messageConvert = function(int){
   var outputArray = [];
   var indexString = "";
   for(i = 0; i <= int; i++){
     indexString = i.toString();
-    if(i % 3 === 0){
-      outputArray.push(neighbor + " " + string);
-    }
-    else if (indexString.indexOf(3) > -1){
+    if (indexString.indexOf(3) > -1){
       outputArray.push(neighbor);
     }
     else if (indexString.indexOf(2) > -1){
@@ -29,10 +26,7 @@ var messageReverse = function(int){
   var indexString = "";
   for(i = int; i >= 0; i--){
     indexString = i.toString();
-    if(i % 3 === 0){
-      outputArray.push(neighbor + " " + string);
-    }
-    else if (indexString.indexOf(3) > -1){
+    if (indexString.indexOf(3) > -1){
       outputArray.push(neighbor);
     }
     else if (indexString.indexOf(2) > -1){
@@ -48,15 +42,18 @@ var messageReverse = function(int){
 
 $(document).ready(function(){
   var inputInt = parseInt($("#input-int").val()); 
-  var inputString = $("#input-string");
+  var inputString = $("#input-string").val();
+  
   $("#button-one").click(function(){   
       event.preventDefault();    
-      $("#output").text(messageConvert(inputInt, inputString));
+      // alert(typeof inputInt)
+      alert(inputInt);
+      $("#output").text(messageConvert(inputInt));
       $("#form-one").submit()
   })
   $("#button-two").click(function(){
     event.preventDefault();    
-    $("#output").text(messageReverse(inputInt, inputString));
+    $("#output").text(messageReverse(inputInt));
     $("#form-one").submit()
   })
 })
