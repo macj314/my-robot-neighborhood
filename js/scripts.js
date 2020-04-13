@@ -1,7 +1,3 @@
-var beep = "beep";
-var boop = "boop";
-var neighbor = "Won't you be my neighbor?";
-
 var messageConvert = function(int, string){
   var outputArray = [];
   var indexString = "";
@@ -11,13 +7,13 @@ var messageConvert = function(int, string){
       outputArray.push("Won't you be my neighbor " + string + "?")
     }
     else if (indexString.indexOf(3) > -1){
-      outputArray.push(neighbor);
+      outputArray.push("Won't you be my neighbor?");
     }
     else if (indexString.indexOf(2) > -1){
-      outputArray.push(boop);
+      outputArray.push("boop");
     }
     else if (indexString.indexOf(1) > -1){
-      outputArray.push(beep);
+      outputArray.push("beep");
     }
     else {outputArray.push(i);}
   }
@@ -33,13 +29,13 @@ var messageReverse = function(int, string){
       outputArray.push("Won't you be my neighbor " + string + "?")
     }
     else if (indexString.indexOf(3) > -1){
-      outputArray.push(neighbor);
+      outputArray.push("Won't you be my neighbor?");
     }
     else if (indexString.indexOf(2) > -1){
-      outputArray.push(boop);
+      outputArray.push("boop");
     }
     else if (indexString.indexOf(1) > -1){
-      outputArray.push(beep);
+      outputArray.push("beep");
     }
     else {outputArray.push(i);}
   }
