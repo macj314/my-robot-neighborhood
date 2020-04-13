@@ -2,12 +2,15 @@ var beep = "beep";
 var boop = "boop";
 var neighbor = "Won't you be my neighbor?";
 
-var messageConvert = function(int){
+var messageConvert = function(int, string){
   var outputArray = [];
   var indexString = "";
   for(i = 0; i <= int; i++){
     indexString = i.toString();
-    if (indexString.indexOf(3) > -1){
+    if((i % 3 === 0) && (i != 0) && (string !== "")){
+      outputArray.push("Won't you be my neighbor " + string + "?")
+    }
+    else if (indexString.indexOf(3) > -1){
       outputArray.push(neighbor);
     }
     else if (indexString.indexOf(2) > -1){
@@ -21,12 +24,15 @@ var messageConvert = function(int){
   return outputArray;
 }
 
-var messageReverse = function(int){
+var messageReverse = function(int, string){
   var outputArray = [];
   var indexString = "";
   for(i = int; i >= 0; i--){
     indexString = i.toString();
-    if (indexString.indexOf(3) > -1){
+    if((i % 3 === 0) && (i != 0) && (string !== "")){
+      outputArray.push("Won't you be my neighbor " + string + "?")
+    }
+    else if (indexString.indexOf(3) > -1){
       outputArray.push(neighbor);
     }
     else if (indexString.indexOf(2) > -1){
@@ -41,19 +47,16 @@ var messageReverse = function(int){
 }
 
 $(document).ready(function(){
-  var inputInt = parseInt($("#input-int").val()); 
-  var inputString = $("#input-string").val();
-  
-  $("#button-one").click(function(){   
-      event.preventDefault();    
-      // alert(typeof inputInt)
-      alert(inputInt);
-      $("#output").text(messageConvert(inputInt));
-      $("#form-one").submit()
+  $("#button-one").click(function(event){   
+      event.preventDefault();
+      var inputInt = parseInt($("#input-int").val()); 
+      var inputString = $("#input-string").val();  
+      $("#output").text(messageConvert(inputInt, inputString));
   })
-  $("#button-two").click(function(){
+  $("#button-two").click(function(event){
     event.preventDefault();    
-    $("#output").text(messageReverse(inputInt));
-    $("#form-one").submit()
+    var inputInt = parseInt($("#input-int").val()); 
+    var inputString = $("#input-string").val(); 
+    $("#output").text(messageReverse(inputInt, inputString));
   })
 })
