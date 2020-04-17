@@ -3,7 +3,7 @@ var messageConvert = function(int, string){
   var indexString = "";
   for(i = 0; i <= int; i++){
     indexString = i.toString();
-    if((i % 3 === 0) && (i != 0) && (string !== "")){
+    if((i % 3 === 0) && (indexString.indexOf(3) > -1) && (i != 0) && (string !== "")){
       outputArray.push("Won't you be my neighbor " + string + "?")
     }
     else if (indexString.indexOf(3) > -1){
@@ -25,7 +25,7 @@ var messageReverse = function(int, string){
   var indexString = "";
   for(i = int; i >= 0; i--){
     indexString = i.toString();
-    if((i % 3 === 0) && (i != 0) && (string !== "")){
+    if((i % 3 === 0) && (indexString.indexOf(3) > -1) && (i != 0) && (string !== "")){
       outputArray.push("Won't you be my neighbor " + string + "?")
     }
     else if (indexString.indexOf(3) > -1){
