@@ -25,9 +25,9 @@ _This site takes a number from the user prints out a list of numbers from 0 to i
 * Display two buttons. One will display the above in regular order. The second will display it in reverse order.
   * Input "3"
   * Output: "'Won't you be my neighbor?', 'boop', 'beep', 0"
-* Create a field for the user to enter a 'name'. If a number is divisable by 3 -> add the name to the output
+* Create a field for the user to enter a 'name'. If a number is divisable by 3 -> add the 'name' to the 'neigbor' message.
   * Input: "3", "Jason"
-  * Output: "0, 'beep', 'boop', 'Won't you be my neighbor 'Jason'?'
+  * Output: "0, 'beep', 'boop', 'Won't you be my neighbor Jason?'
 
 ## Setup/Installation Requirements
 
